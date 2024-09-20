@@ -1,0 +1,102 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+/* Reset body and HTML */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure the homepage takes up the full height of the screen */
+.home {
+  background-color: #d6d2ad;
+  background-image: url('homepage.jpg'); /* Background image */
+  background-size: cover; /* Ensure background image covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background repeat */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for image and text */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image styles */
+.center-image {
+  width: 100%;
+  max-width: 400px; /* Max width for the image */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  color: #49501f; /* Replace #desiredColor with the color you want */
+}
+
+/* Text box styling */
+.text-box {
+  background-color: rgba(208, 197, 102, 0.8); /* Semi-transparent background */
+  padding: 3px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'League Spartan', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Flexbox to center and layout plant links */
+.plant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 30px; /* Increase the gap between boxes */
+  padding: 0;
+  list-style: none;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: 20px;
+  margin-right: 60px;
+}
+
+.plant-list li {
+  flex: 0 1 calc(50% - 30px); /* Two items per row */
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Add some space between rows */
+}
+
+.plant-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #626a22;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.plant-link:hover {
+  background-color: #97a33c;
+}
+
+

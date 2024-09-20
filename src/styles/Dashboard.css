@@ -1,0 +1,134 @@
+/* Reset body and HTML */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  flex-direction: column; /* Ensure the layout flows from top to bottom */
+}
+
+/* Dashboard Page Styles */
+.dashboard-page {
+  background-color: #d6d2ad;
+  background-image: url('homepage.jpg'); /* Background image */
+  background-size: cover; /* Ensure background image covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background repeat */
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for plant info and image */
+.plant-info-container {
+  display: flex;
+  flex-direction: column; /* Stack the elements */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-top: 20px;
+  width: 100%;
+  max-width: 1200px; /* Set a max width to center the content */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .plant-info-container {
+    flex-direction: row; /* Side by side layout for larger screens */
+    justify-content: space-between; /* Space between info and image */
+  }
+
+  .plant-info, .plant-image {
+    width: 48%; /* Ensure the image and info share space evenly */
+  }
+}
+
+/* Plant Info Styles */
+.plant-info {
+  background-color: rgba(227, 224, 196, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+}
+
+/* Plant Image Styles */
+.plant-image {
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image fits well within the dimensions */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between; /* Space between the buttons */
+  margin: 30px auto 0; /* Center the buttons and add margin */
+  margin-bottom: 20px;
+}
+
+.prev-button, .next-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #626a22;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  flex: 1;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: #a17d60;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #626a22; /* Match your site's color scheme */
+  color: white;
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%; /* Full width of the page */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 14px;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center; /* Center the footer links */
+  gap: 20px; /* Space between the links */
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #f3f8d0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
