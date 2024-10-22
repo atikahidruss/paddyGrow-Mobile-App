@@ -2,6 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 import { getDatabase, ref, onValue, set, remove } from 'firebase/database';
+import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -19,6 +20,7 @@ const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 const storage = getStorage(app);
 const database = getDatabase(app);
+const messaging = getMessaging(app);
 
 // Export the Firebase services and utility functions
 export { firestore, storage, database, ref, onValue, set, remove };

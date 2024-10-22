@@ -77,9 +77,8 @@ function Dashboard() {
           <p><strong>Health Status:</strong> {plantData.healthStatus}</p>
           <p><strong>Disease Detected:</strong> {plantData.diseaseDetected}</p>
           <p><strong>Plant Stage:</strong> {plantData.stage}</p>
-          <p><strong>Days Since Planted:</strong> {plantData.daysSincePlanted}</p>
-          <p><strong>RGB Color:</strong> {plantData.rgbColor}</p>
-          <p><strong>Leaf Length:</strong> {plantData.leafLength}</p>
+          <p><strong>Days Since Planted:</strong> {plantData.daysSince}</p>
+          <p><strong>RGB Color:</strong> {plantData.rgbColour}</p>
         </div>
       </div>
 
