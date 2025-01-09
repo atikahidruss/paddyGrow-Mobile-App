@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.notifications-page {
+  padding: 1rem;
+  background-color: #d6d2ad;
+  background-image: url('homepage.jpg'); /* Background image */
+  background-size: cover; /* Ensure background image covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background repeat */
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 0.8rem; /* Adjusted padding */
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification-item p {
+  margin: 0.4rem;
+  font-size: 1rem; /* Smaller font size */
+  font-family: 'League Spartan', sans-serif;
+}
+
+.notifications-header {
+  font-size: 2rem;
+  color: #e7ead6;
+  text-align: center; /* Center the text */
+  font-family: 'League Spartan', sans-serif; /* Custom font */
+  margin-top: 1rem; /* Add some margin to the top */
+  font-family: 'League Spartan', sans-serif;
+}
+
+.telegram-link-container {
+  text-align: center;
+  margin: 15px 0; /* Adds some space around the link */
+}
+
+.telegram-link {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.telegram-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Ensure .plant-page takes up full width and height */
+.addplant-page {
+  background-color: #c4cc9e;
+  background-size: cover; /* Ensure background image covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background repeat */
+  background-image: url('homepage.jpg'); 
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column; /* Align content in a column */
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.addplant-header {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center; /* Center the text */
+  font-family: 'League Spartan', sans-serif; 
+}
+
+.add-plant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-plant-form input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #ccc;
+  font-size: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.add-plant-form button {
+  padding: 0.5rem;
+  background-color: #626a22;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.add-plant-form button:hover {
+  background-color: #505d13;
+}
+
+/* Input field styles */
+.add-plant-form input, 
+.add-plant-form select {
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #ccc;
+  font-size: 0.75rem;
+  width: 10rem;  /* Set a consistent width */
+  transition: border-color 0.3s;
+  align-items: center;
+  justify-content: center;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* Focus effect on input and select fields */
+.add-plant-form input:focus, 
+.add-plant-form select:focus {
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #ccc;
+  font-size: 0.75rem;
+  width: 10rem;  /* Set a consistent width */
+  transition: border-color 0.3s;
+  align-items:center;
+  justify-content: center;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* Dropdown specific styles */
+.add-plant-form select {
+  background-color: #ffffff;
+  cursor: pointer;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 1rem; /* Space for the custom arrow */
+  position: relative;
+  border: 0.1rem solid #ccc;
+  font-size: 0.75rem;
+  width: 10rem; 
+  transition: border-color 0.3s;
+  align-items: center;
+  justify-content: center;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* Custom arrow for the dropdown */
+.add-plant-form select::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  justify-content: center;
+}

@@ -1,0 +1,110 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Reset body and HTML */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure the homepage takes up the full height of the screen */
+.home {
+  padding: 1rem;
+  background-color: #c4cc9e;
+  background-image: url('homepage.jpg'); /* Background image */
+  background-size: cover; /* Ensure background image covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background repeat */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for image and text */
+.image-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Image styles */
+.center-image {
+  width: 100%;
+  max-width: 400px; /* Max width for the image */
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.text-box p {
+  color: #49501f; /* Replace #desiredColor with the color you want */
+}
+
+/* Text box styling */
+.text-box {
+  background-color: rgba(208, 197, 102, 0.8); /* Semi-transparent background */
+  padding: 0.2rem 2rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-family: 'League Spartan', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* Flexbox to center and layout plant links */
+.plant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  gap: 1rem; 
+  padding: 0;
+  list-style: none;
+  margin-top: 30px;
+  max-width: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.plant-list li {
+  flex: 0 1 calc(50% - 30px); /* Two items per row */
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Add some space between rows */
+}
+
+.plant-link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #626a22;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.plant-link:hover {
+  background-color: #97a33c;
+}
+
+

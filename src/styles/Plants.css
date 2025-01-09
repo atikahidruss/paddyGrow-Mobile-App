@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  display: flex;/* Ensure content flows from top to bottom */
+  height: auto;
+  min-height: 100vh;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure .plant-page takes up full width and height */
+.plant-page {
+  background-color: #c4cc9e;
+  background-size: cover; /* Ensure background image covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background repeat */
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column; /* Align content in a column */
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.plants-header {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center; /* Center the text */
+  font-family: 'League Spartan', sans-serif; 
+}
+
+.plant-list {
+  display: flex; /* Enable flexbox layout */
+  flex-wrap: wrap; /* Allow wrapping to the next row if there isn’t enough space */
+  justify-content: center; /* Center the items horizontally */
+  gap: 1rem; /* Add spacing between the boxes */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove bullets from list */
+  margin: 0 auto; /* Center the entire list */
+  margin-top: 1.5rem;
+  margin-bottom: 5rem; /* Add space to ensure no overlap with the navbar */
+}
+
+.plant-page .plant-list {
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  max-width: 30rem;
+}
+
+.plant-page .plant-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.plant-page .plant-item p {
+  font-size: 0.9rem;
+  justify-content: center;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.plant-page .plant-item button {
+  padding: 0.5rem;
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.plant-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sort-button {
+  background-color: #4b6d34;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+  gap: 5rem;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.sort-button:hover {
+  background-color: #fff;
+}
+
+.sort-container {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-dropdown {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.sort-dropdown:focus {
+  outline: none;
+  border-color: #4b6d34;
+}
+
+.plant-item {
+  background-size: cover; /* Ensure the background covers the box */
+  background-position: center; /* Center the image in the box */
+  background-repeat: no-repeat; /* Avoid repeating the image */
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff; /* Ensure text is readable on top of the image */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Push content to the bottom of the box */
+  height: 300px; /* Set a fixed height for consistency */
+  position: relative; /* Allow adding overlays */
+}
+
+/* Optional: Add a semi-transparent overlay for better readability */
+.plant-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity for readability */
+  border-radius: 1rem; /* Match the border radius of the box */
+  z-index: 0; /* Ensure it is behind the text */
+}
+
+.plant-item p,
+.plant-item button {
+  z-index: 1; /* Place content above the overlay */
+}
+
+/* Styling the delete button */
+.plant-item button {
+  background-color: rgba(255, 69, 58, 0.8); /* Slight transparency */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.plant-item button:hover {
+  background-color: rgba(255, 69, 58, 1); /* Solid color on hover */
+}
+
+/* Style the "Sort by:" label */
+.sort-label {
+  font-size: 1rem; /* Adjust font size */
+  font-weight: bold; /* Make it bold */
+  color: #333; /* Change text color */
+  margin-right: 0.5rem; /* Add spacing between label and dropdown */
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* Style the dropdown to match */
+.sort-dropdown {
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* Hover and focus styles for dropdown */
+.sort-dropdown:hover {
+  border-color: #626a22; /* Change border color on hover */
+  background-color: #f9f9f9; /* Slightly lighter background on hover */
+}
+
+.sort-dropdown:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #505d13; /* Highlight border color when focused */
+}
+
+.add-plant-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #4b6d34;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: 'League Spartan', sans-serif;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.add-plant-button:hover {
+  background-color: #3b5d28;
+}

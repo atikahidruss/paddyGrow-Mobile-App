@@ -1,0 +1,83 @@
+/* signup.css */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    background-color: #c4cc9e; /* Light beige background */
+  }
+  
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .signup-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .app-title {
+    font-size: 24px;
+    color: #4b6d34; /* Greenish text */
+    margin: 0;
+  }
+  
+  .welcome-text {
+    font-size: 18px;
+    color: #69a74e; /* Slightly lighter green */
+    margin: 10px 0;
+  }
+  
+  .signup-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #69a74e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signup-button:hover {
+    background-color: #5b9444; /* Darker green */
+  }
+  
+  .login-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .login-link {
+    color: #69a74e;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  .error-text {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  

@@ -1,0 +1,23 @@
+/* LogoutButton.css */
+
+.logout-button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  .logout-icon {
+    color: #fff; /* Green icon color */
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .logout-icon:hover {
+    color: #5b9444; /* Darker green on hover */
+  }
+  
+  .logout-icon:active {
+    color: #4b6d34; /* Even darker green when clicked */
+  }
+  

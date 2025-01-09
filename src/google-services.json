@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "118594307835",
+    "firebase_url": "https://fyp-19b08-default-rtdb.firebaseio.com",
+    "project_id": "fyp-19b08",
+    "storage_bucket": "fyp-19b08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118594307835:android:f98739c8cde379353a525e",
+        "android_client_info": {
+          "package_name": "com.paddygrow.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ7xIKxgV63KBBixWfnLBzpMYcb_8zvuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
