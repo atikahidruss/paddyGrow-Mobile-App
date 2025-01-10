@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "fyp-19b08",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -22,5 +23,12 @@
         "npm --prefix \"$RESOURCE_DIR\" run lint"
       ]
     }
-  ]
+  ],
+  "rewrites": [
+  {
+    "site": "fyp-19b08",
+    "source": "**",
+    "destination": "/index.html"
+  }
+]
 }

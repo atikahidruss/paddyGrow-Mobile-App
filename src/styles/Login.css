@@ -31,18 +31,40 @@ input {
     max-width: 300px;
   }
   
-  button {
+  .login-button {
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: #69a74e;
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-family: 'League Spartan', sans-serif;
   }
   
+  .login-button:hover {
+    background-color: #5b9444; /* Darker green */
+  }
+
   button:hover {
     background-color: #45a049;
+  }
+  
+  .signup-text {
+    margin-bottom: 5px;
+  }
+
+  .signup-link {
+    padding: 8px;
+    background-color: #69a74e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .signup-link:hover {
+    background-color: #5b9444; /* Darker green */
   }
 
 .error-text {

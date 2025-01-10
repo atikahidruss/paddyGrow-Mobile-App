@@ -1,6 +1,6 @@
 // components/Login.js
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase"; // Import Firebase Auth
 import '../styles/Login.css';
@@ -22,6 +22,10 @@ function Login() {
     }
   };
 
+  const goToSignup = () => {
+    navigate("/signup");
+  };
+  
   return (
     <div className="login-container">
       <div className="login-card">
@@ -50,8 +54,10 @@ function Login() {
           </button>
         </form>
         <p className="signup-text">
-          Don’t have an account? <a href="/signup" className="signup-link">Sign Up</a>
-        </p>
+          Don’t have an account?  <button onClick={goToSignup} className="signup-link">
+      Sign Up
+    </button>
+    </p>
       </div>
     </div>
   );

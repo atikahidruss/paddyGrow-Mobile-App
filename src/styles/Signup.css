@@ -70,10 +70,7 @@ body {
     color: #69a74e;
     text-decoration: none;
   }
-  
-  .login-link:hover {
-    text-decoration: underline;
-  }
+ 
   
   .error-text {
     color: red;
@@ -81,3 +78,16 @@ body {
     margin: 10px 0;
   }
   
+  .login-text {
+    padding-bottom: 5px;
+  }
+
+  .login-link {
+    padding: 10px;
+    background-color: #69a74e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }

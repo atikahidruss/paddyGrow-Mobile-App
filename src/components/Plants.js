@@ -13,21 +13,18 @@ function Plants() {
   // Fetch plants and devices from Firebase
   useEffect(() => {
     const plantsRef = ref(database, 'plants');
+    onValue(plantsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const plantList = Object.entries(data).map(([key, value]) => ({
+          id: key, // Include the Firebase key as the plant's ID
+          ...value,
+        }));
+        setPlants(plantList);
+      }
+    });
+  }, []);
   
-    const unsubscribePlants = onValue(
-      plantsRef,
-      (snapshot) => {
-        const data = snapshot.val();
-        setPlants(data || []); // Store fetched plants
-      },
-      (error) => setError(error.message)
-    );
-  
-    // Cleanup function to unsubscribe
-    return () => {
-      unsubscribePlants();
-    };
-  }, []);  
 
   const handleAddPlantNavigation = () => {
     navigate('/add-plant'); // Redirect to the Add Plant page
@@ -35,13 +32,18 @@ function Plants() {
 
   // Delete a plant and update the device status
   const handleDeletePlant = (plantId, device) => {
+    if (!plantId || !device) {
+      console.error('Invalid plant or device data');
+      return;
+    }
+  
     const plantRef = ref(database, `plants/${plantId}`);
     const deviceRef = ref(database, `device/${device}`);
-
+  
     update(deviceRef, { status: 'Available' })
       .then(() => {
         console.log(`Device ${device} status updated to "Available"`);
-        return remove(plantRef);
+        return remove(plantRef); // Remove the plant from Firebase
       })
       .then(() => {
         console.log(`Plant with ID ${plantId} deleted successfully`);
@@ -50,7 +52,7 @@ function Plants() {
         console.error('Error deleting plant or updating device status:', error);
         setError(error.message);
       });
-  };
+  };  
 
   // Sorting logic
   const sortPlants = (plants, option) => {

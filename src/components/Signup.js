@@ -30,6 +30,10 @@ function Signup() {
     }
   };
 
+  const goToLogin = () => {
+    navigate("/");
+  };
+
   return (
     <div className="signup-container">
       <div className="signup-card">
@@ -66,8 +70,8 @@ function Signup() {
           </button>
         </form>
         <p className="login-text">
-          Already have an account? <a href="/" className="login-link">Login</a>
-        </p>
+          Already have an account? <button onClick={goToLogin} className="login-link">Login</button>
+          </p>
       </div>
     </div>
   );
