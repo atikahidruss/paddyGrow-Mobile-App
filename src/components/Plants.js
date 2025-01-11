@@ -107,7 +107,8 @@ function Plants() {
                 key={index}
                 className="plant-item"
                 style={{
-                    backgroundImage: `url(${plant.image})`, // Set the image as the background
+                  backgroundImage: plant.image ? `url(${plant.image})` : 'none', // Use image if available
+                  backgroundColor: plant.image ? 'transparent' : '#c4cc9e', // Set default color if no image
                 }}
             >
                 <p><strong>Name:</strong> {plant.name || 'N/A'}</p>

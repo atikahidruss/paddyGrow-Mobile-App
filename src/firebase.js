@@ -7,7 +7,7 @@ import { getDatabase, ref, onValue, set, remove, update } from 'firebase/databas
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "<FIREBASE KEY>",
+  apiKey: "AIzaSyBZ7xIKxgV63KBBixWfnLBzpMYcb_8zvuk",
   authDomain: "fyp-19b08.firebaseapp.com",
   databaseURL: "https://fyp-19b08-default-rtdb.firebaseio.com",
   projectId: "fyp-19b08",

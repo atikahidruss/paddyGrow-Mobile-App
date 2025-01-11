@@ -18,9 +18,27 @@ function Login() {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/home"); // Redirect to Home upon successful login
     } catch (err) {
-      setError("Invalid email or password");
+      console.error("Login error:", err.message); // Log detailed error message
+  
+      // Handle specific error codes
+      switch (err.code) {
+        case "auth/user-not-found":
+          setError("No account found with this email.");
+          break;
+        case "auth/wrong-password":
+          setError("Incorrect password. Please try again.");
+          break;
+        case "auth/invalid-email":
+          setError("Invalid email format.");
+          break;
+        case "auth/too-many-requests":
+          setError("Too many login attempts. Please try again later.");
+          break;
+        default:
+          setError(err.message);
+      }
     }
-  };
+  };  
 
   const goToSignup = () => {
     navigate("/signup");
