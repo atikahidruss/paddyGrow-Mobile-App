@@ -28,7 +28,7 @@ PaddyGrow is a mobile application designed to monitor plant health in real-time.
 1. Clone the repository:
    ```bash
    git clone https://github.com/atikahidruss/paddyGrow-Mobile-App.git
-   cd paddyGrowMobile
+   cd paddyGrow-Mobile-App
    ```
 2. Install dependencies:
    ```bash
